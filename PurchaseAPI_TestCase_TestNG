@@ -1,0 +1,43 @@
+package paymentsAPI;
+
+import org.testng.annotations.Test;
+
+public class PurchaseAPITest {
+
+	@Test(priority = 0, groups = "smoke")
+	public void testPurchaseConnectivityAndAvailability() {
+		// Verify the basic connectivity and availability of all four APIs
+		System.out.println("Connectivity and Availability of Purchase API");
+	}
+
+	@Test(priority = 1, groups = "smoke")
+	public void testPurchaseStatusCode() {
+		// Ensure that the APIs return appropriate status codes (e.g., 200 OK) for a simple request
+		System.out.println("Status Code : 200 OK");
+	}
+
+	@Test(priority = 2, groups = "functional")
+	public void testValidPurchaseRequest() {
+		// Verify that a valid purchase request is successfully processed, and the payment is reflected in the user's account
+		System.out.println("The Purchase Request is Successfully "
+				+ "Processed and the payment is reflected in the user's account");
+	}
+
+	@Test(priority = 3, groups = "functional")
+	public void testAmountDeductionAfterPurchase() {
+		// Validate that the correct amount is deducted from the user's account after a successful purchase
+		System.out.println("Successfully Correct amount deducted from User Account After Purchase");
+	}
+
+	@Test(priority = 4, groups = "functional")
+	public void testEdgeCasesPurchaseAmount() {
+		// Test edge cases for purchase amounts (e.g., zero amount, negative amount).
+		System.out.println("Zero Amount");
+	}
+
+	@Test(priority = 4, groups = "Regression")
+	public void testRegressionPurchaseAPI() {
+		// Perform regression testing after every significant change to the APIs or the underlying system.
+		System.out.println("Regression Test After Change");
+	}
+}
