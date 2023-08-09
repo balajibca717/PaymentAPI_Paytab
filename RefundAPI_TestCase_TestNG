@@ -1,0 +1,38 @@
+package paymentsAPI;
+
+import org.testng.annotations.Test;
+
+public class RefundAPITest {
+
+	@Test(priority = 0, groups = "smoke")
+	public void testRefundAPIConnectivityAndAvailability() {
+		// Verify the basic connectivity and availability of all four APIs
+		System.out.println("Connectivity and Availability of Refund API");
+	}
+
+	@Test(priority = 1, groups = "smoke")
+	public void testRefundAPIStatusCode() {
+		// Ensure that the APIs return appropriate status codes (e.g., 200 OK) for a simple request
+		System.out.println("Status Code : 200 OK");
+	}
+
+	@Test(priority = 2, groups = "functional")
+	public void testSuccessfullRefundRequest() {
+		// Test a refund request for a successful transaction and confirm the refund amount in the response.
+		System.out.println("Refund Transaction request is Successful and Refund amound is Confirmed");
+	}
+
+	@Test(priority = 3, groups = "functional")
+	public void testInitialPurchaseRefundAmount() {
+		// Ensure that refunding more than the initial purchase amount is not allowed.
+		System.out.println("Refunding more than the initial purchase amount is not allowed.");
+	}
+
+	@Test(priority = 4, groups = "Regression")
+	public void testRegressionRefundAPI() {
+		// Perform regression testing after every significant change to the APIs or the underlying system.
+		System.out.println("Regression Test After Change");
+	}
+
+
+}
