@@ -1,2 +1,2 @@
 # PaymentAPI_Paytab
-Assessement completed as per the requirement
+Assessement completed as per the requirement.
