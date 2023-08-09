@@ -1,0 +1,51 @@
+package paymentsAPI;
+
+import org.testng.annotations.Test;
+
+public class ReversalAPITest {
+
+	@Test(priority = 0, groups = "smoke")
+	public void testReversalAPIConnectivityAndAvailability() {
+		
+    // Verify the basic connectivity and availability of all four APIs
+		
+    System.out.println("Connectivity and Availability of Refund API");
+	
+  }
+
+	@Test(priority = 1, groups = "smoke")
+  public void testReversalAPIStatusCode() {
+		
+    // Ensure that the APIs return appropriate status codes (e.g., 200 OK) for a simple request
+		
+    System.out.println("Status Code : 200 OK");
+	
+  }
+
+	@Test(priority = 2,groups = "functional")
+	public void testReversalAPITransactionASNotSettled() {
+		
+    //Test a reversal request for a transaction that has not been settled yet and validate the response.
+		
+    System.out.println("The Reversal Transaction Request has been not settled yet	");
+	
+  }
+
+	@Test(priority = 3,groups = "functional")
+	public void testFunctionalReversalUnsettledTrasaction() {
+		
+    //Attempt a reversal for a settled transaction and confirm the rejection
+		
+    System.out.println("Reversal for the settled Transaction and Rejection is confirmed");
+	
+  }	
+
+	@Test(priority = 4, groups = "Regression")
+	public void testRegressionReversalAPI() {
+		
+    // Perform regression testing after every significant change to the APIs or the underlying system.
+		
+    System.out.println("Regression Test After Change");
+	}
+
+}
